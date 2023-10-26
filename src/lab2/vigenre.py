@@ -53,3 +53,33 @@ def decrypt_vigenere(ciphertext: str, keyword: str) -> str:
             shift = (ord(keyword[(i - space_count) % len(keyword)].upper()) - 65)
             plaintext += chr(((ord(ciphertext[i]) - shift - 65) % 26) + 65)
     return plaintext
+
+if __name__ == "__main__":
+    while True:
+        choice_message = input("Выберете действие (зашифровать / дешифровать / exit): ")
+        if choice_message.lower() == 'зашифровать':
+            plaintext = input("Введите слово, которое хотите зашифровать: ")
+            if plaintext == '':
+                print('Пустая строка!')
+            else:
+                keyword = input("Введите ключ: ")
+                try:
+                    print(encrypt_vigenere(plaintext, keyword))
+                except ZeroDivisionError:
+                    print("Вы ввели пустой ключ.")
+
+        elif choice_message.lower() == 'дешифровать':
+            ciphertext = input("Введите слово, которое хотите зашифровать: ")
+            if ciphertext == '':
+                print("Пустая строка!")
+            else:
+                keyword = input("Введите ключ: ")
+                try:
+                    print(decrypt_vigenere(ciphertext, keyword))
+                except ZeroDivisionError:
+                    print("Вы ввели пустой ключ.")
+        elif choice_message == 'exit':
+            break
+        else:
+            print('Ошибка операции, выберете что-то из этого (зашифровать / дешифровать): ')
+            
