@@ -12,8 +12,14 @@ def is_prime(n: int) -> bool:
     >>> is_prime(8)
     False
     """
-    # PUT YOUR CODE HERE
-    pass
+    delit = 0
+    for i in range(2, n + 1):
+        if n % i == 0:
+            delit += 1
+    if delit == 1:
+        return True
+    else:
+        return False
 
 
 def gcd(a: int, b: int) -> int:
