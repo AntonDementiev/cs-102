@@ -69,7 +69,7 @@ if __name__ == "__main__":
                     print("Вы ввели пустой ключ.")
 
         elif choice_message.lower() == 'дешифровать':
-            ciphertext = input("Введите слово, которое хотите зашифровать: ")
+            ciphertext = input("Введите слово, которое хотите дешифровать: ")
             if ciphertext == '':
                 print("Пустая строка!")
             else:
