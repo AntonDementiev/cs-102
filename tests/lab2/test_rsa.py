@@ -12,8 +12,6 @@ class RsaTestCase(unittest.TestCase):
     def test_multiplicative_inverse(self):
         self.assertEqual(multiplicative_inverse(7, 40), 23)
 
-    # def test_generate_keypair(self):
-    #     self.assertEqual(generate_keypair(17, 23), (307, 391), (219, 391))
     def test_generate_keypair(self):
         public_key, private_key = generate_keypair(17, 23)
         self.assertNotEqual(public_key, private_key)
