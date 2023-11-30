@@ -1,8 +1,5 @@
 import unittest
 import sudoku
-import sys
-
-sys.path.append(r"/Users/anton_dem/Desktop/Labs/Proga/cs-102")
 
 
 class SudokuTestCase(unittest.TestCase):
