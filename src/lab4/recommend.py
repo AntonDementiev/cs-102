@@ -22,11 +22,6 @@ class Recommend:
                 history.append(viewed_films)
         return history
 
-    # def get_user_views(self):
-    #     user_input = input("Введите список просмотренных фильмов (через запятую): ")
-    #     user_views = list(map(int, user_input.split(',')))
-    #     return user_views
-
     def filter_users(self, user_views):
         filtered_users = []
         for user in self.history:
